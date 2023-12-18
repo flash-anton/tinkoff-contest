@@ -9,6 +9,7 @@
 
     <modules>
         <module>common</module>
+        <module>contest-2023-12</module>
     </modules>
 
     <properties>
