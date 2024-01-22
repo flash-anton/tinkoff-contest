@@ -10,6 +10,7 @@
     <modules>
         <module>common</module>
         <module>contest-2023-12</module>
+        <module>contest-2024-aads</module>
     </modules>
 
     <properties>
