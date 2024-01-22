@@ -37,11 +37,11 @@ class ContestTest extends ContestChecker {
     void example1() {
         check("""
                 0
-                1
-                0 1
-                0 1
+                1 1
+                5
+                6 6
                 """, """
-                12
+                11
                 """);
     }
 
@@ -49,11 +49,11 @@ class ContestTest extends ContestChecker {
     void example2() {
         check("""
                 0
-                1
-                0 1 3
-                0 1
+                2 1
+                5 5
+                6 6
                 """, """
-                13
+                12
                 """);
     }
 
@@ -61,12 +61,12 @@ class ContestTest extends ContestChecker {
     void example3() {
         check("""
                 0
-                2
-                0 1 3
-                0 1
-                0 1
+                2 2
+                5 5
+                6 6
+                7 7
                 """, """
-                23
+                22
                 """);
     }
 
@@ -74,9 +74,9 @@ class ContestTest extends ContestChecker {
         @Override
         public Stream<? extends Arguments> provideArguments(ExtensionContext extensionContext) {
             return Stream.of(
-                    Arguments.of("12", "0 \n 1 \n 0 1   \n 0 1"),
-                    Arguments.of("13", "0 \n 1 \n 0 1 3 \n 0 1"),
-                    Arguments.of("23", "0 \n 2 \n 0 1 3 \n 0 1 \n 0 1")
+                    Arguments.of("11", "0 \n 1 1 \n 5   \n 6 6"),
+                    Arguments.of("12", "0 \n 2 1 \n 5 5 \n 6 6"),
+                    Arguments.of("22", "0 \n 2 2 \n 5 5 \n 6 6 \n 7 7")
             );
         }
     }

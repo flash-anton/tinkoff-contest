@@ -18,19 +18,15 @@ public class Contest {
     }
 
     public static void alg(InputStream is, BufferedWriter writer) throws IOException {
-        Scanner reader = new Scanner(is);
+        Reader reader = new Reader(is);
         reader.readLine();
 
         int N = reader.nextInt();
-
+        int M = reader.nextInt();
         int[] a = reader.nextInts(new int[N]);
-        int A = a[0];
-        int B = a[1];
-
-        long[][] req = new long[A][B];
-        for (int i = 0; i < N; i++) {
-            reader.nextLongs(req[i]);
-            req[i][0] = A % B;
+        long[][] req = new long[M][2];
+        for (int j = 0; j < M; j++) {
+            reader.nextLongs(req[j]);
         }
 
         String solution = alg1(a, req);
@@ -50,15 +46,15 @@ public class Contest {
     /**
      * "Быстрый" ридер потока.
      */
-    public static class Scanner {
+    public static class Reader {
         private final InputStream is;
         private int lastReadByte = '\n';
 
-        public Scanner(InputStream is) {
+        public Reader(InputStream is) {
             this.is = is;
         }
 
-        private long nextLong() throws IOException {
+        public long nextLong() throws IOException {
             while (lastReadByte == ' ' || lastReadByte == '\n') {
                 lastReadByte = is.read();
             }

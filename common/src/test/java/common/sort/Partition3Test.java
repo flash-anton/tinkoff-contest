@@ -1,7 +1,6 @@
 package common.sort;
 
 import common.BinSearch;
-import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import java.util.Arrays;
@@ -12,7 +11,6 @@ import java.util.concurrent.ThreadLocalRandom;
 import static org.junit.jupiter.api.Assertions.assertAll;
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 
-@DisplayName("Partition3Test")
 public class Partition3Test {
     @Test
     public void stressTest() {
